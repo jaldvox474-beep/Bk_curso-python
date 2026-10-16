@@ -70,6 +70,20 @@ print(animals.count('🐶')) # Cuantas veces aparece el elemento '🐶' -> 2
 print('🐼' in animals) # Comprueba si hay un '🐼' en la lista -> True
 print('🐹' in animals) # -> False
 
+# Buscar el índice de un elemento
+print(animals.index('🐼')) # Devuelve el índice de la primera aparición -> 1
+
+# Si el elemento no existe, index() lanza un error (ValueError)
+# Por eso conviene comprobar antes con "in", o usar try/except
+# if '🦁' in animals:
+#    print(animals.index('🦁'))
+# else:
+#    print('🦁 no está en la lista')
+
+# index() también acepta un rango de búsqueda (inicio, fin)
+animals = ['🐶', '🐼', '🐨', '🐶']
+print(animals.index('🐶', 1)) # Busca '🐶' a partir del índice 1 -> 3
+
 ###
 # EJERCICIOS
 # Usa siempre que puedas los métodos que has aprendido
